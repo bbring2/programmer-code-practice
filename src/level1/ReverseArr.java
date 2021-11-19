@@ -11,18 +11,17 @@ public class ReverseArr {
         StringBuilder sb = new StringBuilder(parsedValue);
         sb = sb.reverse();
 
-        String[] strArr = sb.toString().split(",");
+        String[] strArr = sb.toString().split("");
 
         int[] answer = new int[sb.length()];
 
         for(int i=0; i<sb.length(); i++) {
             answer[i] = Integer.parseInt(strArr[i]);
         }
-
         return answer;
     }
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(solution(1872378234)));
+        System.out.println(Arrays.toString(solution(1281334)));
     }
 }
