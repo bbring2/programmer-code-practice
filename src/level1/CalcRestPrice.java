@@ -13,11 +13,17 @@ package level1;
 * */
 public class CalcRestPrice {
     public static long solution(int price, int money, int count) {
-        long answer = -1;
+        //자연수의 합 이용할 것
+        long totSum = (long) (price) * (count) * (count+1) / 2;
 
-
-
-        return answer;
+        if(totSum < money) {
+            return 0;
+        } else if(totSum == money)  {
+            return 0;
+        } else
+            return totSum - money;
     }
-
+    public static void main(String[] args) {
+        System.out.println(solution(3, 20, 4));
+    }
 }
