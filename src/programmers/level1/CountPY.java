@@ -1,4 +1,4 @@
-package level1;
+package programmers.level1;
 
 /*
 * ex에 p와 y의 개수가 같거나 아예 없는 경우 true

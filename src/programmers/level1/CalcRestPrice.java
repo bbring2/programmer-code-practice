@@ -1,4 +1,4 @@
-package level1;
+package programmers.level1;
 
 /*
 * 원래 이용료 : price원

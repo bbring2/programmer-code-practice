@@ -1,4 +1,4 @@
-package level1;
+package programmers.level1;
 
 public class AddingCiphers {
     public static int addingCiphers(int n) {

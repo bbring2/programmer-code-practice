@@ -1,4 +1,4 @@
-package level2;
+package programmers.level2;
 
 public class NumOf124 {
     public static String solution(int n) {

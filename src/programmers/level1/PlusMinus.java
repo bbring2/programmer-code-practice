@@ -1,11 +1,9 @@
-package level1;
+package programmers.level1;
 
 /*
 1. 정수들의 절대값을 차례대로 담은 정수 배열 absolutes와 이 정수들의 부호를 닮은 배열 signs
 2. 실제 정수 합 구하기
  */
-
-import java.util.Arrays;
 
 public class PlusMinus {
     public static int plusminus(int[] absolutes, boolean[] signs) {

@@ -1,4 +1,4 @@
-package level2;
+package programmers.level2;
 
 //f(n+2) = f(n+1) + f(n)
 

@@ -1,4 +1,4 @@
-package level2;
+package programmers.level2;
 
 /*
 * 정수를 이어 붙여 만들 수 있는 가장 큰 수

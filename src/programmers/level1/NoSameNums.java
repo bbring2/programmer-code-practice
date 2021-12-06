@@ -1,4 +1,4 @@
-package level1;
+package programmers.level1;
 
 /*
 * arr은 0~9로 이루어짐

@@ -1,4 +1,4 @@
-package level1;
+package programmers.level1;
 
 public class SumTwoNums {
     public static long solution(int a, int b) {

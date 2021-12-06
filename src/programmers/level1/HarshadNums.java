@@ -1,4 +1,4 @@
-package level1;
+package programmers.level1;
 
 public  class HarshadNums {
     public static boolean solution(int x) {

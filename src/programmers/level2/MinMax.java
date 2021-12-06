@@ -1,4 +1,4 @@
-package level2;
+package programmers.level2;
 
 public class MinMax {
     public static String minMax() {

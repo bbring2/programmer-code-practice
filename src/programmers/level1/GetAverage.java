@@ -1,4 +1,4 @@
-package level1;
+package programmers.level1;
 
 public class GetAverage {
     public double solution(int[] arr) {
