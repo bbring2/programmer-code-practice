@@ -8,18 +8,28 @@ import java.util.Arrays;
 * */
 public class LcmGcd {
     public static int[] solution(int n, int m) {
-        int[] answer = {};
-        int tmp = m%n;
-        int gdb = answer[0];
-        int lcm = answer[1];
+        int[] answer = new int[2];
 
-        if(tmp != 0) {
-            gdb = 1;
-            lcm = m*n;
-        } else
-            gdb = m/n; lcm = gdb*(m%n);
+        int gcd = getGCD(Math.max(n,m), Math.min(n,m));
+        int lcm = getLCM(n, m, gcd);
+
+        answer = new int[]{gcd, lcm};
 
         return answer;
+    }
+
+    public static int getGCD(int n, int m) {
+        while (m>0) {
+            int tmp = n;
+            n = m;
+            m = tmp%m;
+        }
+
+        return n;
+    }
+
+    public static int getLCM(int n, int m, int gcd) {
+        return (n*m)/gcd;
     }
 
     public static void main(String[] args) {
