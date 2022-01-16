@@ -6,4 +6,8 @@ public class TwoArray {
 
         return answer;
     }
+
+    public static void main(String[] args) {
+        System.out.println(System.getenv("STRINGCAT_JASYPT_PASSWORD"));
+    }
 }

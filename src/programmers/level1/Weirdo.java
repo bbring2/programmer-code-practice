@@ -1,22 +1,26 @@
 package programmers.level1;
 
+import java.util.Arrays;
 import java.util.Locale;
+import java.util.stream.Collectors;
 
 public class Weirdo {
     public static String makeUpper(String s) {
-        //toUpperCase 사용 -> string 위치 찾기
-        int tmpIndex = s.indexOf(s);
 
-        if(tmpIndex % 2 == 0) {
-            s = s.toUpperCase();
-        } else {
-            s = s.toLowerCase();
+        String[] tmpArr = s.split("");
+
+        for(int i=0; i<tmpArr.length; i++) {
+            if(i%2 == 0) { //홀수 일때
+                 tmpArr[i] = s.toUpperCase();
+            }
         }
 
-        return s;
+        String answer = Arrays.stream(tmpArr).collect(Collectors.joining());
+
+        return answer;
     }
 
     public static void main(String[] args) {
-        System.out.println(makeUpper("ssdfe wejkrhjkds"));
+        System.out.println(makeUpper("sfjsadfasd ddsfhasd"));
     }
 }
