@@ -1,43 +1,58 @@
 package coding;
 
-import java.util.Scanner;
-import java.util.StringTokenizer;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class Solution {
-    static int n, max;
-    public static void dfs(int[] array, int depth) {
-        if(depth==n) {
-            solution(array);
-            return;
-        }
-        for(int i=depth;i<n;i++) {
-            swap(array, i, depth);
-            dfs(array, depth+1);
-            swap(array, i, depth);
-        }
-    }
-    public static void swap(int[] array, int i, int j) {
-        int temp=array[i];
-        array[i]=array[j];
-        array[j]=temp;
-    }
-    public static void solution(int[] array) {
-        int sum=0;
-        for(int i=1;i<n;i++)
-            sum+=Math.abs(array[i]-array[i-1]);
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String s1 = br.readLine();
+        String substring = br.readLine();
+        ArrayList<Integer> indexes = strSearch(s1, substring);
+        String result = listToString(indexes);
 
-        max=Math.max(max, sum);
+        System.out.println(result);
     }
-    public static void main(String[] args) {
-        // TODO Auto-generated method stub
-        Scanner scan = new Scanner(System.in);
-        n=scan.nextInt();
-        int[] array=new int[n];
-        max=0;
-        for(int i=0;i<n;i++)
-            array[i]=scan.nextInt();
 
-        dfs(array, 0);
-        System.out.println(max);
+
+
+    public static ArrayList<Integer> strSearch(String fullString, String substring) {
+
+        ArrayList<Integer> indexes = new ArrayList<>();
+        if (fullString == null || substring == null)
+        {
+            indexes.add(-1);
+            return indexes;
+        }
+        int l1 = fullString.length();
+        int l2 = substring.length();
+
+        for (int i = 0; i < l1-l2+1; i++) {
+            int index = 0;
+            int count = 0;
+            while (count < l2 && fullString.charAt(i + count) == substring.charAt(count)) {
+
+                count++;
+
+                if (count == l2 && fullString.charAt(i) == substring.charAt(0)) {
+                    index = i + 1;
+                    indexes.add(index);
+                }
+
+            }
+
+        }
+        return indexes;
+    }
+
+    public static String listToString(ArrayList<Integer> list)
+    {
+        return list.stream()
+                .map(String::valueOf)
+                .collect(Collectors.joining(","));
     }
 }
