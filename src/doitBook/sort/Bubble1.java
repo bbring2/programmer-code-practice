@@ -2,7 +2,7 @@ package doitBook.sort;
 
 import java.util.Scanner;
 
-public class Bubble {
+public class Bubble1 {
 
     static void swap(int[] a, int idx1, int idx2) {
         int numInArr = a[idx1];
