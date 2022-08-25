@@ -4,8 +4,6 @@ import java.util.*;
 
 public class LonelyInteger {
 
-    //한번만 되어있는것
-
     public static int lonelyinteger(List<Integer> a) {
         int answer = 0;
 
