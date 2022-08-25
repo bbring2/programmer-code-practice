@@ -7,15 +7,15 @@ public class LonelyInteger {
     //한번만 되어있는것
 
     public static int lonelyinteger(List<Integer> a) {
-        int frequencyTimes = 0;
+        int answer = 0;
 
         for(int i=0; i<a.size(); i++) {
-            if(Collections.frequency(a, a.get(i)) < 1) {
-                frequencyTimes++;
+            if(Collections.frequency(a, a.get(i)) == 1) {
+                answer = a.get(i);
             }
         }
 
-        return frequencyTimes;
+        return answer;
     }
 
     public static void main(String[] args) {
