@@ -8,6 +8,8 @@ public class P1152 {
         Scanner scanner = new Scanner(System.in);
         String str = scanner.nextLine();
 
+        System.out.println(str);
+
         String[] strArr = str.split(" ");
 
         System.out.println(strArr.length);
