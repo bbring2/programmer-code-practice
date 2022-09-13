@@ -1,4 +1,4 @@
-package doitBook.sort;
+package doitBook.sort.bubble;
 
 import java.util.Scanner;
 
