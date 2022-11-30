@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class ValidBracket {
 
-    public static boolean isValid(String s) {
+    public boolean isValid(String s) {
         Stack<Character> stack = new Stack<>();
         for(int i = 0; i < s.length(); i++){
             char comp = s.charAt(i);
@@ -28,7 +28,4 @@ public class ValidBracket {
         return stack.size() == 0;
     }
 
-    public static void main(String[] args) {
-        System.out.println(isValid("()]{}"));
-    }
 }
